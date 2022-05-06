@@ -54,7 +54,7 @@ Task-1.1---Docker
     1.Установите docker-compose на хост
     sudo apt install docker-compose -y
 
-    2. С помощью docker-compose установите и запустите сайт на Wordpress. Помимо docker-compose.yml файла у вас могут быть другие файлы? необходимые для работы          Wordpress, например nginx.conf и другие.
+    2. С помощью docker-compose установите и запустите сайт на Wordpress. Помимо docker-compose.yml файла у вас могут быть другие файлы? необходимые для работы Wordpress, например nginx.conf и другие.
     https://github.com/ppashik21/CICD_Wordpress/blob/main/docker-compose.yaml
     
     docker-compose up -d
@@ -71,9 +71,11 @@ Task 1.2 - Kubernetes
   kubectl create namespace test
   
   3. Напишите deployments файл для установки в Kubernetes простого веб приложения, например https://github.com/crccheck/docker-hello-world.
+  https://github.com/ppashik21/Task-1/blob/main/manifest.yaml
+  
+  4. Установите в кластер ingress контроллер
   
   
-  4. Установите в кластер ingress контроллер 
   5. Напишите и установите Ingress rule для получения доступа к своему приложению.
   
   
