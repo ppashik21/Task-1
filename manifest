@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-web
+  labels:
+    app : my-k8s-app
+spec:
+  selector:
+    matchLabels:
+      project: mypro
+  template:
+    metadata:
+      labels:
+        project: mypro
+    spec:
+      containers:
+      - name: mypro-web
+        image: crccheck/hello-world
+        ports:
+        - containerPort: 80
+---
