@@ -74,7 +74,8 @@ Task 1.2 - Kubernetes
   https://github.com/ppashik21/Task-1/blob/main/manifest.yaml
   
   4. Установите в кластер ingress контроллер
-  
+  kubectl apply -f https://projectcontour.io/quickstart/contour.yaml
+
   
   5. Напишите и установите Ingress rule для получения доступа к своему приложению.
   
