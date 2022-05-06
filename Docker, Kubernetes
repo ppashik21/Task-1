@@ -68,7 +68,13 @@ Task 1.2 - Kubernetes
   sudo install minikube /usr/local/bin/
   
   2. Создайте namespace для деплоя простого веб приложения.
+  kubectl create namespace test
   
+  3. Напишите deployments файл для установки в Kubernetes простого веб приложения, например https://github.com/crccheck/docker-hello-world.
+  
+  
+  4. Установите в кластер ingress контроллер 
+  5. Напишите и установите Ingress rule для получения доступа к своему приложению.
   
   
   
