@@ -54,42 +54,6 @@
     sudo apt install docker-compose -y
 
     2. С помощью docker-compose установите и запустите сайт на Wordpress. Помимо docker-compose.yml файла у вас могут быть другие файлы? необходимые для работы          Wordpress, например nginx.conf и другие.
-    version: '3'
-
-services:
-  mysql:
-    image: mysql:8
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: wordpress
-    volumes:
-      - "./db:/var/lib/mysql"
-
-  wordpress:
-    image: wordpress:php7.4-apache
-    ports:
-      - "80:80"
-    environment:
-      WORDPRESS_DB_HOST: mysql
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: root
-      WORDPRESS_DB_NAME: wordpress
-    volumes:
-      - "./wp:/var/www/html/"
-
-  wp-cli:
-    image: wordpress:cli
-    user: "33:33"
-    environment:
-      WORDPRESS_DB_HOST: mysql
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: root
-      WORDPRESS_DB_NAME: wordpress
-    volumes:
-      - "./wp:/var/www/html/"
-      - "./configure-wp.sh:/opt/configure-wp.sh"
-    command: "bash /opt/configure-wp.sh"
+    https://github.com/ppashik21/CICD_Wordpress/blob/main/docker-compose.yaml
     
     docker-compose up -d
