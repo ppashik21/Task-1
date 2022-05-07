@@ -6,7 +6,7 @@ metadata:
   namespace: test
 spec:
   rules:
-  - host: kubernetes.docker.internal
+  - host: kuber
     http:
       paths:
       - path: "/"
